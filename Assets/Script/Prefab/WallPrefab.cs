@@ -9,7 +9,7 @@ public class WallPrefab : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boxCollider.size = new Vector2(transform.sizeDelta.x, transform.sizeDelta.y);
+        boxCollider.size = new Vector2(transform.rect.width, transform.rect.height);
     }
 
     // Update is called once per frame
@@ -17,4 +17,10 @@ public class WallPrefab : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("ácb");
+    }
+
 }
